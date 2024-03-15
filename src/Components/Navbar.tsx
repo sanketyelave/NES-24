@@ -37,6 +37,12 @@ const Navbar: React.FC = () => {
             path: "#contact",
             cName: "nav-text",
         },
+        {
+            id: 4,
+            title: "FAQ'S",
+            path: "#Faq",
+            cName: "nav-text",
+        },
 
     ];
 
@@ -44,7 +50,7 @@ const Navbar: React.FC = () => {
         <>
             <nav
                 className={
-                    "bg-[rgba(0, 0, 0, 0.68);] fixed z-50 sm-0 w-full flex text-[#05445E]"
+                    "bg-[rgba(0, 0, 0, 0.68);] fixed z-50 sm-0 w-full flex text-[#000] hero-txt"
 
                 }
             >
@@ -62,7 +68,7 @@ const Navbar: React.FC = () => {
                         return (
                             <div
                                 key={item.id}
-                                className="justify-between items-center md:text-xl py-4"
+                                className="justify-between items-center md:text-xl hover:text-[#7469B6]  py-4"
                             >
                                 <Link className="md:px-7 hidden md:flex " href={item.path}>
                                     {item.title}
@@ -127,7 +133,7 @@ const Navbar: React.FC = () => {
                         </button>
                     </div>
                     <div>
-                        <div className="flex md:hidden w-screen absolute ">
+                        <div className="flex md:hidden w-screen absolute bg-[white] bg-opacity-70 ">
                             {isMenuOpen ? (
                                 <div className="flex flex-col justify-center  gap-8 items-center text-center w-full h-screen  ">
                                     {NavData.map((item, index) => {
@@ -139,7 +145,7 @@ const Navbar: React.FC = () => {
                                                 style={{ transitionDuration: `${400 + index * 100}ms` }}
                                             >
                                                 <Link
-                                                    className=" text-[#05445E] text-3xl"
+                                                    className=" text-[#000] text-3xl"
                                                     onClick={toggleMenu}
                                                     href={item.path}
                                                 >
